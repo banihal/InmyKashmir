@@ -1,0 +1,51 @@
+{% extends "home/base.html" %}
+{% block content %}
+
+	 <div class="row mw-1000 mx-auto bg-white">
+     	
+
+        <div class="mains col-lg-6 col-sm-6 portfolio-item text-center">
+            <h2 class="text-primary">What we do?</h2>
+            {% for logo in logos %}
+                <div class="text-center">
+                    {{logo.description}}
+                </div>
+                <a class="btn btn-outline-info" href="{% url 'about' %}">About Us</a>
+            {% endfor %}
+        </div>
+
+
+     	<div class="logo col-lg-6 col-sm-6 portfolio-item text-center">
+     		<h2 class="text-primary">InmyKashmir</h2>
+            {% for logo in logos %}
+                <div class="text-center">
+                    <img class="w-50 h-50 mx-auto justify-content-center rounded" src="{{ MEDIA_URL}} {{ logo.img_file.url }}" alt="{{ logo.img_name}}">
+                    <p class="font-weight-bold">{{ logo.img_name }}</p>
+                </div>
+            {% endfor %}
+     	</div>
+        <h2 class="product text-success d-flex justify-content-center col-lg-8 ">Explore our products</h2>
+       
+            
+            {% for product in products %}
+            <div class="product col-lg-10 portfolio-item d-flex justify-content-center">
+                {% if forloop.counter <= 2  %}
+                <div class="text-center col-lg-4">
+                    <img class="w-100 h-200 mx-auto justify-content-center rounded" src="{{ MEDIA_URL}} {{ product.img_file.url }}" alt="{{ product.img_name}}">
+                    <h4 class="font-weight-bold">{{ product.img_name }}</h4>
+                </div>
+                <div class="col-sm-5">
+                    <p class="">{{ product.description }}</p>
+                </div> 
+                {% endif %}
+            </div>
+            {% endfor %}
+            
+            <span class="d-flex justify-content-center col-lg-12"> <a class="btn btn-outline-info" href="{% url 'product' %}">Proceed to buy</a></span>
+            
+        
+     	
+     	
+
+    </div>
+{% endblock content %}

@@ -1,0 +1,18 @@
+{% extends "home/base.html" %}
+{% block content %}
+
+	 
+	<div class="about mx-auto bg-white">
+		<h2 class="about text-primary">About</h2>
+		{% for sample in samples %}
+			<div class="about col-sm-8">
+				<p><b>Owner's Name</b> : {{sample.name}}</p>
+				<p><b> What we do </b> : {{sample.description}}</p>
+				<p><b>Address</b> : {{sample.address}}</p>
+				<p><b>Contact No</b></b> : {{sample.contact_no}}</p>
+				<p><b>Email</b> : {{sample.email}}</p>
+			</div>
+		{% endfor %}
+	</div>
+
+{% endblock content %}
