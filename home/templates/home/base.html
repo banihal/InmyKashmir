@@ -17,7 +17,7 @@
 	  }
 
 	  body{
-	  	background: rgba(44, 89, 135, 0.4)
+	  	background: rgba(240, 240, 240, 0.4)
 	  }
 	  header{
 	  	margin-top: 50px;
@@ -41,26 +41,28 @@
   </style>
 
   </head>
-<body class="w-90 mx-auto">
+<body class="col-md-11 mx-auto">
 	<header>
-		<nav class="navbar navbar-expand-md navbar-blue bg-light fixed-top col-md-12 mx-auto text-blue">
+		<header>
+		<nav class="navbar navbar-expand-md bg-light navbar-blue fixed-top col-md-11 mx-auto">
 			<a class="navbar-brand" href="{% url 'home' %}"><h2 class="font-weight-bold">InmyKashmir</h2></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
 			<div class="collapse navbar-collapse" id="collapsibleNavbar">
-				<ul class="nav navbar-nav navbar-center">
+				<ul class="navbar-nav">
 					<li class="nav-item">
 						<a class="nav-link" href="{% url 'home' %}">Home</a>
 					</li>
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="{% url 'home' %}" id="navdropdown" data-toggle="dropdown">Explore</a>
+						<a class="nav-link dropdown-toggle" href="{% url 'product' %}" id="navdropdown" data-toggle="dropdown">Explore</a>
 						<div class="dropdown-menu">
 							<a class="dropdown-item" href="{% url 'product' %}">Products</a>
 					
 						</div>
 					</li>
+					
 					<li class="nav-item">
 						<a class="nav-link" href="{% url 'home' %}">Ask</a>
 					</li>
