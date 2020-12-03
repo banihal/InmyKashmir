@@ -1,0 +1,8 @@
+.mains:hover{
+	display: block;
+	color: lightgrey;
+}
+
+.mains{
+	background: LightGray;
+}
