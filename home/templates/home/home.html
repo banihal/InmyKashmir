@@ -19,7 +19,7 @@
      		<h2 class="text-primary">InmyKashmir</h2>
             {% for logo in logos %}
                 <div class="text-center">
-                    <img class="w-50 h-50 mx-auto justify-content-center rounded" src="{{ MEDIA_URL}} {{ logo.img_file.url }}" alt="{{ logo.img_name}}">
+                    <img class="w-50 h-50 mx-auto justify-content-center rounded" src="{{ logo.img_file.url }}" alt="{{ logo.img_name}}">
                     <p class="font-weight-bold">{{ logo.img_name }}</p>
                 </div>
             {% endfor %}
@@ -31,7 +31,7 @@
             <div class="product col-lg-10 portfolio-item d-flex justify-content-center">
                 {% if forloop.counter <= 2  %}
                 <div class="text-center col-lg-4">
-                    <img class="w-100 h-200 mx-auto justify-content-center rounded" src="{{ MEDIA_URL}} {{ product.img_file.url }}" alt="{{ product.img_name}}">
+                    <img class="w-100 h-200 mx-auto justify-content-center rounded" src="{{ product.img_file.url }}" alt="{{ product.img_name}}">
                     <h4 class="font-weight-bold">{{ product.img_name }}</h4>
                 </div>
                 <div class="col-sm-5">
