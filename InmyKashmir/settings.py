@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 import dj_database_url
+import django_heroku
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -145,3 +146,5 @@ DATABASES['default'].update(db_from_env)
 
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '2694f9c9b33ce580906e33d9c1860fbecdc6e69a7949e8e6')
 #DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+
+django_heroku.settings(locals())
