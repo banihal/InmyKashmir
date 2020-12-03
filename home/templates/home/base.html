@@ -35,19 +35,23 @@
 	  	margin-left: 200px;
 	  }
 
+	  #navbar-toggler-icon{
+	  	color: blue; 
+	  }
+
 
 
 
   </style>
 
   </head>
-<body class="col-md-11 mx-auto">
+<body class="mx-auto">
 	<header>
 		<header>
-		<nav class="navbar navbar-expand-md bg-light navbar-blue fixed-top col-md-11 mx-auto">
+		<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top mx-auto">
 			<a class="navbar-brand" href="{% url 'home' %}"><h2 class="font-weight-bold">InmyKashmir</h2></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-				<span class="navbar-toggler-icon"></span>
+			<button id="nav-toggle-button" class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span id="navbar-toggler-icon" class="navbar-toggler-icon"></span>
 			</button>
 
 			<div class="collapse navbar-collapse" id="collapsibleNavbar">
